@@ -1,0 +1,14 @@
+- name: Remove apache on centos
+  hosts: centos  
+
+  tasks:
+    - name: remove apache web server
+      yum: name=httpd state=absent
+
+- name: Remove apache on ubuntu
+  hosts: ubuntu
+  
+  tasks:
+    - name: remove apache web server
+      apt: name=apache2 state=absent
+
